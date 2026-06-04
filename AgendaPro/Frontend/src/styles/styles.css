@@ -1,1 +1,53 @@
 @import url(./global.css);
+
+/* ===== Header ===== */
+header{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 24px 0;
+    border-bottom: 1px solid var(--border-color);
+    padding: 16px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+.nav-logo span {
+    font-size: var(--font-size-logo);
+    font-weight: var(--font-weight-semibold);
+}
+
+.nav-menu ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 24px 0;
+}
+
+.nav-menu a {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.btn-login {
+    background-color: var(--blue-accent);
+    gap: 8px;
+    padding: 6px 60px;
+    border-radius: 8px;
+}
