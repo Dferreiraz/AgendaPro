@@ -1,0 +1,98 @@
+/* =========================
+   Variables
+========================= */
+
+:root {
+  --bg-primary: #0F172A;
+  --bg-secondary: #1E293B;
+
+  --blue-accent: #3B82F6;
+  --blue-accent-hover: #2563EB;
+
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+
+  --border-color: rgba(148, 163, 184, 0.2);
+
+  --transition: 0.3s ease;
+}
+
+/* =========================
+   Reset
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Base
+========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* =========================
+   Layout
+========================= */
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+/* =========================
+   Scrollbar
+========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue-accent);
+  border-radius: 999px;
+}
