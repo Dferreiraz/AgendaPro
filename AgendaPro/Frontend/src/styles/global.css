@@ -3,6 +3,10 @@
 ========================= */
 
 :root {
+    /* =========================
+     Colors
+  ========================= */
+
   --bg-primary: #0F172A;
   --bg-secondary: #1E293B;
 
@@ -13,6 +17,34 @@
   --text-secondary: #94A3B8;
 
   --border-color: rgba(148, 163, 184, 0.2);
+
+  /* =========================
+     Typography Sizes
+  ========================= */
+
+  --font-size-logo: 24px;
+
+  --font-size-h1: 64px;
+  --font-size-h2: 48px;
+  --font-size-h3: 32px;
+  --font-size-h4: 24px;
+
+  --font-size-body: 16px;
+  --font-size-small: 14px;
+  --font-size-caption: 12px;
+
+  /* =========================
+     Font Weights
+  ========================= */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* =========================
+     Effects
+  ========================= */
 
   --transition: 0.3s ease;
 }
