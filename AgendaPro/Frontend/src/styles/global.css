@@ -13,10 +13,17 @@
   --blue-accent: #3B82F6;
   --blue-accent-hover: #2563EB;
 
+  --amber-accent: #F59E0B;
+
   --text-primary: #F8FAFC;
   --text-secondary: #94A3B8;
 
   --border-color: rgba(148, 163, 184, 0.2);
+
+  /* RGB channels (para usar com transparência) */
+  --blue-accent-rgb: 59, 130, 246;
+  --text-secondary-rgb: 100, 116, 139;
+  --amber-accent-rgb: 245, 158, 11;
 
   /* =========================
      Typography Sizes
@@ -27,6 +34,7 @@
   --font-size-h1: 64px;
   --font-size-h2: 48px;
   --font-size-h3: 32px;
+  --font-size-h3-cards: 20px;
   --font-size-h4: 24px;
 
   --font-size-body: 16px;
