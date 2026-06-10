@@ -88,21 +88,104 @@ header {
     gap: 24px;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
     background-color: var(--blue-accent);
     padding: 12px 60px;
     border-radius: 8px;
     font-size: var(--font-size-body);
-    font-weight: var(--font-weight-medium); 
+    font-weight: var(--font-weight-medium);
 }
 
 .btn-secondary {
     background-color: transparent;
     border: 2px solid var(--border-color);
     font-size: var(--font-size-body);
-    font-weight: var(--font-weight-medium); 
+    font-weight: var(--font-weight-medium);
 }
 
-.hero-image{
+.hero-image {
     box-shadow: 20px 20px 40px rgba(131, 135, 139, 0.3);
+}
+
+/* ===== Features Section ===== */
+.features-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    padding: 96px 0;
+}
+
+.features-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.features-intro p {
+    font-size: var(--font-size-body);
+    color: var(--text-secondary);
+}
+
+.cards-container {
+    display: flex;
+    gap: 24px;
+}
+
+.features-cards {
+    background-color: var(--bg-secondary);
+    padding: 28px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 350px;
+}
+
+.features-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.features-icon-wrap svg {
+    width: 24px;
+    height: 24px;
+}
+
+.features-icon-wrap.blue {
+    background: rgba(var(--blue-accent-rgb), 0.15);
+}
+
+.features-icon-wrap.slate {
+    background: rgba(var(--text-secondary-rgb), 0.3);
+}
+
+.features-icon-wrap.amber {
+    background: rgba(var(--amber-accent-rgb), 0.15);
+}
+
+.features-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.features-content h3 {
+    font-size: var(--font-size-h3-cards);
+    font-weight: var(--font-weight-semibold);
+}
+
+.features-content p {
+    font-size: var(--font-size-small);
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
