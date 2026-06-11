@@ -531,3 +531,41 @@ header {
     transform: rotate(180deg);
 }
 
+/* ===== CTA Section ===== */
+.cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 96px 0;
+    background-color: var(--bg-tertiary);
+}
+
+.cta-content {
+    background-color: var(--bg-secondary);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 80px 120px;
+}
+
+.cta-content h2 {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-bold);
+    width: 620px;
+    line-height: 1.15;
+}
+
+.cta-content p {
+    font-size: var(--font-size-body);
+    color: var(--text-secondary);
+    width: 480px;
+    line-height: 1.6;
+}
+
+.cta-content .btn-primary {
+    margin-top: 8px;
+    padding: 14px 40px;
+}
