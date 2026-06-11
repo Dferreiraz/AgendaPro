@@ -189,3 +189,75 @@ header {
     color: var(--text-secondary);
     line-height: 1.6;
 }
+
+/* ===== Path/How It Works Section ===== */
+.how-it-works{
+    background-color: var(--bg-tertiary);
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.how-it-works-intro h2 {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-bold);
+    margin-top: 48px;
+}
+
+.how-it-works-steps{
+    display: flex;
+    gap: 24px;
+}
+
+.step-card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 16px;
+    width: 280px;
+    position: relative;
+    margin-bottom: 48px;
+}
+
+.step-card h3 {
+    font-size: var(--font-size-h3-cards);
+    font-weight: var(--font-weight-semibold);
+}
+
+.step-card p {
+    font-size: var(--font-size-small);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;                          /* círculo */
+    border: 2px solid var(--border-color);        /* borda azul */
+    color: var(--text-secondary);
+     background-color: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-semibold);
+    flex-shrink: 0;                              /* não encolhe */
+    position: relative;
+}
+
+.step-number:hover {
+    background-color: var(--blue-accent);
+    color: var(--bg-primary);
+    transition: var(--transition);
+
+}
+
+.step-line{
+    width: 305px;
+    border: none;
+    border-top: 1px solid var(--border-color);
+}
+
