@@ -4,16 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>AgendaPro | Gestão Inteligente de Agendamentos</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="./src/styles/styles.css">
-
     <script src="./src/js/main.js" defer></script>
 </head>
 
@@ -21,12 +16,10 @@
 
     <!-- Nav Header -->
     <header>
-
         <div class="nav-logo">
             <img src="./src/assets/images/logo-agendapro.svg" alt="Logo da AgendaPro">
             <span>AgendaPro</span>
         </div>
-
         <nav class="nav-menu">
             <ul>
                 <li><a href="#">Funcionalidades</a></li>
@@ -35,97 +28,86 @@
                 <li><a href="#">Recursos</a></li>
             </ul>
         </nav>
-
         <nav class="nav-cta">
-            <a href="#">Cadastre-se</a>
+            <a href="#" class="nav-link">Cadastre-se</a>
             <a href="#" class="btn-login">Entrar</a>
         </nav>
-
+        <!-- Mobile hamburger -->
+        <button class="nav-hamburger" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
     </header>
+
+    <!-- Mobile nav drawer -->
+    <div class="nav-drawer">
+        <ul>
+            <li><a href="#">Funcionalidades</a></li>
+            <li><a href="#">Preços</a></li>
+            <li><a href="#">Soluções</a></li>
+            <li><a href="#">Recursos</a></li>
+            <li><a href="#">Cadastre-se</a></li>
+            <li><a href="#" class="btn-login">Entrar</a></li>
+        </ul>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
+            <span class="hero-badge">PLATAFORMA LÍDER EM AGENDAMENTOS</span>
             <h1>Organize seus agendamentos em um só lugar.</h1>
-            <p>Controle horários, clientes e serviços de forma simples e profissional com a interface mais intuitiva do
-                mercado.</p>
+            <p>Controle horários, clientes e serviços de forma simples e profissional com a interface mais intuitiva do mercado.</p>
         </div>
         <div class="hero-btns">
             <a href="#" class="btn-primary">Começar Agora</a>
             <a href="#" class="btn-secondary">Ver Demonstração</a>
         </div>
         <div class="hero-image">
-            <img src="./src/assets/images/image-hero.svg" alt="Ilustração de agendamento inteligente">
+            <img src="./src/assets/images/image-hero.svg" alt="Ilustração de agendamento inteligente" loading="lazy">
         </div>
     </section>
 
     <!-- Features Section -->
     <section class="features-section">
-
         <div class="features-intro">
             <h2>Potencialize seu negócio</h2>
             <p>Tudo o que você precisa para uma gestão impecável</p>
         </div>
-
         <div class="cards-container">
             <div class="features-cards">
                 <div class="features-icon-wrap blue">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="1.8" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <rect x="3" y="4" width="18" height="18" rx="3" />
-                        <line x1="16" y1="2" x2="16" y2="6" />
-                        <line x1="8" y1="2" x2="8" y2="6" />
-                        <line x1="3" y1="10" x2="21" y2="10" />
-                    </svg>
+                    <img src="./src/assets/icons/icon-calendario.svg" alt="Ícone de agenda inteligente">
                 </div>
                 <div class="features-content">
                     <h3>Agenda Inteligente</h3>
-                    <p>Controle horários e disponibilidade com arrastar e soltar intuitivo. Otimize sua rotina
-                        automaticamente.</p>
+                    <p>Controle horários e disponibilidade com arrastar e soltar intuitivo. Otimize sua rotina automaticamente.</p>
                 </div>
             </div>
-
             <div class="features-cards">
                 <div class="features-icon-wrap slate">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="9" cy="7" r="3" />
-                        <circle cx="17" cy="8" r="2.5" />
-                        <path d="M2 20c0-3.31 3.13-6 7-6s7 2.69 7 6" />
-                        <path d="M19 14c1.66.69 3 2.27 3 4" />
-                    </svg>
+                    <img src="./src/assets/icons/icon-group.svg" alt="Ícone de gestão de clientes">
                 </div>
                 <div class="features-content">
                     <h3>Gestão de Clientes</h3>
-                    <p>Tenha todo o histórico, preferências e detalhes de contato organizados em um perfil único e
-                        acessível.</p>
+                    <p>Tenha todo o histórico, preferências e detalhes de contato organizados em um perfil único e acessível.</p>
                 </div>
             </div>
-
             <div class="features-cards">
                 <div class="features-icon-wrap amber">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
-                        <path d="M13.73 21a2 2 0 0 1-3.46 0" />
-                        <line x1="12" y1="2" x2="12" y2="4" />
-                    </svg>
+                    <img src="./src/assets/icons/icon-notifications.svg" alt="Ícone de confirmações automáticas">
                 </div>
                 <div class="features-content">
                     <h3>Confirmações Automáticas</h3>
-                    <p>Reduza faltas e esquecimentos com lembretes via WhatsApp e E-mail enviados automaticamente pelo
-                        sistema.</p>
+                    <p>Reduza faltas e esquecimentos com lembretes via WhatsApp e E-mail enviados automaticamente pelo sistema.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Path/How It Works Section -->
+    <!-- How It Works Section -->
     <section class="how-it-works">
         <div class="how-it-works-intro">
             <h2>Como Funciona</h2>
         </div>
-
         <div class="how-it-works-steps">
             <div class="step-card">
                 <div class="step-number">1</div>
@@ -133,30 +115,109 @@
                 <h3>Crie sua Conta</h3>
                 <p>Rápido e sem burocracia, pronto em 30 segundos.</p>
             </div>
-
             <div class="step-card">
                 <div class="step-number">2</div>
                 <hr class="step-line">
                 <h3>Cadastre seus Serviços</h3>
-                <p>Defina valores, durações e profissonais da sua equipe.</p>
+                <p>Defina valores, durações e profissionais da sua equipe.</p>
             </div>
-
             <div class="step-card">
                 <div class="step-number">3</div>
                 <hr class="step-line">
                 <h3>Receba Agendamentos</h3>
                 <p>Seus clientes agendam online 24 horas por dia.</p>
             </div>
-
             <div class="step-card">
                 <div class="step-number">4</div>
-                    <hr class="step-line">
-                    <h3>Gerencie Tudo</h3>
-                    <p>Controle agenda, clientes e pagamentos em um só lugar.</p>
+                <hr class="step-line">
+                <h3>Gerencie Tudo</h3>
+                <p>Controle agenda, clientes e pagamentos em um só lugar.</p>
             </div>
         </div>
-        
+    </section>
+
+    <!-- Dashboard Preview Section -->
+    <section class="dashboard-preview">
+        <div class="dashboard-content">
+            <h2>Visão completa do seu negócio</h2>
+            <p>Acompanhe estatísticas em tempo real, gerencie fluxos de caixa e tenha o controle total de sua base de clientes em uma única tela elegante e funcional.</p>
+            <ul class="dashboard-list">
+                <li>
+                    <img src="./src/assets/icons/check-icon.svg" alt="check">
+                    Dashboards interativos
+                </li>
+                <li>
+                    <img src="./src/assets/icons/check-icon.svg" alt="check">
+                    Relatórios de faturamento
+                </li>
+                <li>
+                    <img src="./src/assets/icons/check-icon.svg" alt="check">
+                    Gestão multi-unidade
+                </li>
+            </ul>
+        </div>
+        <div class="dashboard-image-wrap">
+            <img src="./src/assets/images/dashboard-image.svg" alt="Dashboard Preview">
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+<section class="faq">
+    <div class="faq-intro">
+        <h2>Perguntas Frequentes</h2>
+        <p>Tire suas dúvidas sobre a plataforma</p>
+    </div>
+
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>O AgendaPro serve para o meu tipo de negócio?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+            </button>
+            <div class="faq-answer">
+                <p>Sim! O AgendaPro foi desenvolvido para atender salões de beleza, clínicas, estúdios, consultórios e qualquer negócio que trabalhe com agendamentos. Se você precisa organizar horários e clientes, a plataforma funciona para você.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>Preciso instalar algum programa?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+            </button>
+            <div class="faq-answer">
+                <p>Não. O AgendaPro é 100% online, basta ter um navegador e acesso à internet. Funciona no computador, tablet e celular sem nenhuma instalação.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>Como funciona o período de teste gratuito?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+            </button>
+            <div class="faq-answer">
+                <p>Você tem 14 dias para testar todas as funcionalidades sem precisar cadastrar cartão de crédito. Após o período, escolha o plano que melhor se encaixa no seu negócio.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>Posso cancelar a qualquer momento?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+            </button>
+            <div class="faq-answer">
+                <p>Sim, sem multas ou burocracia. Você pode cancelar sua assinatura quando quiser diretamente pelo painel da sua conta.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 </body>
-
 </html>
