@@ -9,21 +9,30 @@
 
   --bg-primary: #0F172A;
   --bg-secondary: #1E293B;
+  --bg-tertiary: #0e131b;
+  --bg-elevated: #363941;
+  --bg-sunken: #191b23;
+  --bg-deep: #0b0e15;
 
   --blue-accent: #3B82F6;
   --blue-accent-hover: #2563EB;
 
   --amber-accent: #F59E0B;
+  --green-accent: #10B981;
+  --red-accent: #EF4444;
 
   --text-primary: #F8FAFC;
   --text-secondary: #94A3B8;
 
   --border-color: rgba(148, 163, 184, 0.2);
+  --border-color-subtle: rgba(255, 255, 255, 0.05);
 
   /* RGB channels (para usar com transparência) */
   --blue-accent-rgb: 59, 130, 246;
   --text-secondary-rgb: 100, 116, 139;
   --amber-accent-rgb: 245, 158, 11;
+  --green-accent-rgb: 16, 185, 129;
+  --red-accent-rgb: 239, 68, 68;
 
   /* =========================
      Typography Sizes
