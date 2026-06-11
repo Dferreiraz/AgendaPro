@@ -620,3 +620,273 @@ footer {
 .footer-links a:hover {
     color: var(--text-primary);
 }
+
+/* ===========================
+   Responsividade — Tablet
+   (largura até 1024px)
+=========================== */
+@media (max-width: 1024px) {
+
+    /* Header */
+    header {
+        padding: 16px 32px;
+    }
+
+    .nav-menu,
+    .nav-cta {
+        display: none;
+    }
+
+    .nav-hamburger {
+        display: flex;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 64px 0 0 0;
+        gap: 32px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+        width: 560px;
+    }
+
+    .hero-content p {
+        width: 480px;
+    }
+
+    .hero-image img {
+        width: 720px;
+    }
+
+    /* Features */
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features-cards {
+        width: 560px;
+    }
+
+    /* How it works */
+    .how-it-works-steps {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .step-line {
+        display: none;
+    }
+
+    /* Dashboard */
+    .dashboard-preview {
+        flex-direction: column;
+        gap: 48px;
+        padding: 80px 32px;
+    }
+
+    .dashboard-content h2 {
+        font-size: 36px;
+        width: 560px;
+    }
+
+    .dashboard-content p {
+        width: 560px;
+    }
+
+    .dashboard-image-wrap img {
+        width: 560px;
+    }
+
+    /* FAQ */
+    .faq-list {
+        width: 680px;
+    }
+
+    .faq-question {
+        width: 680px;
+    }
+
+    /* CTA */
+    .cta-content {
+        padding: 64px 80px;
+    }
+
+    .cta-content h2 {
+        font-size: 40px;
+        width: 520px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 24px 32px;
+    }
+
+    .footer-links {
+        gap: 20px;
+    }
+}
+
+/* ===========================
+   Responsividade — Mobile
+   (largura até 640px)
+=========================== */
+@media (max-width: 640px) {
+
+    /* Header */
+    header {
+        padding: 14px 20px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 48px 0 0 0;
+        gap: 28px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+        width: 320px;
+        line-height: 1.15;
+    }
+
+    .hero-content p {
+        font-size: var(--font-size-small);
+        width: 300px;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 280px;
+        text-align: center;
+    }
+
+    .hero-image {
+        padding: 32px 0 0 0;
+    }
+
+    .hero-image img {
+        width: 360px;
+        border-radius: 8px 8px 0 0;
+    }
+
+    /* Features */
+    .features-section {
+        padding: 64px 20px;
+    }
+
+    .features-intro h2 {
+        font-size: 24px;
+    }
+
+    .features-cards {
+        width: 340px;
+    }
+
+    /* How it works */
+    .how-it-works {
+        padding: 64px 20px;
+    }
+
+    .how-it-works-intro h2 {
+        font-size: 24px;
+    }
+
+    .step-card {
+        width: 280px;
+        padding-bottom: 0;
+    }
+
+    /* Dashboard */
+    .dashboard-preview {
+        padding: 64px 20px;
+    }
+
+    .dashboard-content h2 {
+        font-size: 28px;
+        width: 320px;
+    }
+
+    .dashboard-content p {
+        font-size: var(--font-size-small);
+        width: 320px;
+    }
+
+    .dashboard-image-wrap img {
+        width: 340px;
+    }
+
+    /* FAQ */
+    .faq {
+        padding: 64px 20px;
+    }
+
+    .faq-intro h2 {
+        font-size: 24px;
+    }
+
+    .faq-list {
+        width: 340px;
+    }
+
+    .faq-question {
+        width: 340px;
+        font-size: var(--font-size-small);
+        padding: 16px 16px;
+    }
+
+    .faq-answer {
+        padding: 0 16px;
+    }
+
+    .faq-item.open .faq-answer {
+        padding: 0 16px;
+    }
+
+    /* CTA */
+    .cta {
+        padding: 64px 20px;
+    }
+
+    .cta-content {
+        padding: 48px 24px;
+        border-radius: 16px;
+    }
+
+    .cta-content h2 {
+        font-size: 28px;
+        width: 300px;
+    }
+
+    .cta-content p {
+        font-size: var(--font-size-small);
+        width: 280px;
+    }
+
+    .cta-content .btn-primary {
+        width: 280px;
+        text-align: center;
+    }
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 32px 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
