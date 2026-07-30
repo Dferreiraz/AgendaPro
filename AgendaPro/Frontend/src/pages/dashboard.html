@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgendaPro - Dashboard</title>
+
+    <!-- Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../styles/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <h2>AgendaPro</h2>
+                    <span>Premium Workspace</span>
+                </div>
+
+                <button class="btn-new-event">
+                    <i data-lucide="plus"></i>
+                    <span>New Event</span>
+                </button>
+
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li class="active">
+                            <a href="dashboard.html"><i data-lucide="layout-grid"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="services.html"><i data-lucide="grid"></i> Serviços</a>
+                        </li>
+                        <li>
+                            <a href="schedule.html"><i data-lucide="calendar"></i> Agenda</a>
+                        </li>
+                        <li>
+                            <a href="clients.html"><i data-lucide="users"></i> Clientes</a>
+                        </li>
+                        <li>
+                            <a href="analytics.html"><i data-lucide="bar-chart-2"></i> Relatórios</a>
+                        </li>
+                        <li>
+                            <a href="settings.html"><i data-lucide="settings"></i> Configurações</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="../../index.html" class="btn-logout"><i data-lucide="log-out"></i> Sair</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="main-wrapper">
+
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="date-display">FRIDAY, JUN 12</div>
+
+                <div class="header-actions">
+                    <div class="search-box">
+                        <i data-lucide="search"></i>
+                        <input type="text" placeholder="Global search...">
+                    </div>
+                    <button class="btn-icon" aria-label="Notifications">
+                        <i data-lucide="bell"></i>
+                    </button>
+                    <div class="user-avatar">
+                        <img src="../assets/icons/user.svg" alt="Admin Avatar">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Dashboard Content -->
+            <main class="dashboard-content">
+
+                <!-- Welcome Section -->
+                <section class="welcome-section">
+                    <div>
+                        <span class="section-tag">QUICK ACCESS</span>
+                        <h1 class="welcome-title">Welcome back, Admin</h1>
+                    </div>
+
+                    <div class="quick-actions">
+                        <button class="btn-quick"><i data-lucide="user-plus"></i> New Client</button>
+                        <button class="btn-quick"><i data-lucide="calendar-plus"></i> New Appointment</button>
+                        <button class="btn-quick"><i data-lucide="briefcase"></i> New Service</button>
+                    </div>
+                </section>
+
+                <!-- Stat Cards -->
+                <section class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon-wrapper"><i data-lucide="users"></i></div>
+                            <span class="stat-badge positive"><i data-lucide="trending-up"></i> +12%</span>
+                        </div>
+                        <span class="stat-label">Total Clients</span>
+                        <h3 class="stat-value">1,248</h3>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon-wrapper"><i data-lucide="calendar"></i></div>
+                        </div>
+                        <span class="stat-label">Today's Appointments</span>
+                        <h3 class="stat-value">24</h3>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon-wrapper"><i data-lucide="banknote"></i></div>
+                            <span class="stat-badge positive"><i data-lucide="trending-up"></i> +R$ 1.2k</span>
+                        </div>
+                        <span class="stat-label">Monthly Revenue</span>
+                        <h3 class="stat-value">R$ 8.450</h3>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon-wrapper"><i data-lucide="check-circle-2"></i></div>
+                        </div>
+                        <span class="stat-label">Attendance Rate</span>
+                        <h3 class="stat-value">92%</h3>
+                    </div>
+                </section>
+
+                <!-- Main Analytics & Upcoming Grid -->
+                <section class="content-grid">
+
+                    <!-- Chart Container -->
+                    <div class="card chart-card">
+                        <div class="card-header">
+                            <div>
+                                <h2>Weekly Appointments</h2>
+                                <p>Activity trends over the last 7 days</p>
+                            </div>
+                            <select class="select-dropdown">
+                                <option>Last 7 Days</option>
+                                <option>Last 30 Days</option>
+                            </select>
+                        </div>
+
+                        <div class="chart-area">
+                            <!-- Inline SVG Curve Chart -->
+                            <svg class="chart-svg" viewBox="0 0 500 150" preserveAspectRatio="none">
+                                <path d="M0 135 Q 75 130, 150 132 T 300 128 T 450 120 T 500 122" fill="none"
+                                    stroke="#383f51" stroke-width="2" />
+                                <path d="M0 140 Q 75 138, 150 135 T 300 133 T 450 128 T 500 125" fill="none"
+                                    stroke="#60a5fa" stroke-width="2" />
+                            </svg>
+
+                            <div class="chart-labels">
+                                <span>MON</span>
+                                <span>TUE</span>
+                                <span>WED</span>
+                                <span>THU</span>
+                                <span>FRI</span>
+                                <span>SAT</span>
+                                <span>SUN</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Appointments Container -->
+                    <div class="card upcoming-card">
+                        <div class="card-header">
+                            <h2>Upcoming</h2>
+                            <a href="#" class="link-view-all">View All</a>
+                        </div>
+
+                        <div class="appointments-list">
+                            <div class="appointment-item">
+                                <div class="time-box">
+                                    <span class="time">09:00</span>
+                                    <span class="period">AM</span>
+                                </div>
+                                <div class="details">
+                                    <h4>João Silva</h4>
+                                    <p>Financial Consulting</p>
+                                </div>
+                            </div>
+
+                            <div class="appointment-item">
+                                <div class="time-box">
+                                    <span class="time">10:30</span>
+                                    <span class="period">AM</span>
+                                </div>
+                                <div class="details">
+                                    <h4>Maria Souza</h4>
+                                    <p>Estate Planning</p>
+                                </div>
+                            </div>
+
+                            <div class="appointment-item">
+                                <div class="time-box">
+                                    <span class="time">14:00</span>
+                                    <span class="period">PM</span>
+                                </div>
+                                <div class="details">
+                                    <h4>Carlos Oliveira</h4>
+                                    <p>Portfolio Review</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Gap Info Box -->
+                        <div class="gap-info-box">
+                            <i data-lucide="info"></i>
+                            <p>Your next gap is at <strong>11:30 AM.</strong></p>
+                        </div>
+                    </div>
+
+                </section>
+
+            </main>
+
+            <!-- Footer -->
+            <footer class="dashboard-footer">
+                <p>© 2024 AgendaPro Inc. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Security</a>
+                    <a href="#">Status</a>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Quick Action Floating Button -->
+    <button class="fab-button" aria-label="Quick Add">
+        <i data-lucide="message-square-plus"></i>
+    </button>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

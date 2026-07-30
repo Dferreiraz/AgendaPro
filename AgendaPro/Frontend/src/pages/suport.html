@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgendaPro - Suporte</title>
+
+    <!-- Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Importando CSS -->
+    <link rel="stylesheet" href="../styles/support.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <h2>AgendaPro</h2>
+                    <span>ESPAÇO PREMIUM</span>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="dashboard.html"><i data-lucide="layout-grid"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="services.html"><i data-lucide="grid"></i> Serviços</a>
+                        </li>
+                        <li>
+                            <a href="schedule.html"><i data-lucide="calendar"></i> Agenda</a>
+                        </li>
+                        <li>
+                            <a href="clients.html"><i data-lucide="users"></i> Clientes</a>
+                        </li>
+                        <li>
+                            <a href="analytics.html"><i data-lucide="bar-chart-2"></i> Relatórios</a>
+                        </li>
+                        <li>
+                            <a href="settings.html"><i data-lucide="settings"></i> Configurações</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li class="active">
+                            <a href="support.html"><i data-lucide="help-circle"></i> Suporte</a>
+                        </li>
+                        <li>
+                            <a href="../../index.html" class="btn-logout"><i data-lucide="log-out"></i> Sair</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="main-wrapper">
+            <main class="dashboard-content">
+
+                <!-- Header da Página -->
+                <header class="page-header">
+                    <h1 class="page-title">Central de Suporte</h1>
+                    <p class="page-subtitle">Como podemos ajudar você hoje? Escolha um canal ou consulte nossas dúvidas
+                        frequentes.</p>
+                </header>
+
+                <!-- Cards de Canais de Atendimento -->
+                <div class="support-channels-grid">
+
+                    <div class="channel-card">
+                        <div class="channel-icon">
+                            <i data-lucide="message-square"></i>
+                        </div>
+                        <div>
+                            <h3 class="channel-title">Chat em Tempo Real</h3>
+                            <p class="channel-desc">Converse com nosso time de atendimento de segunda a sexta, das 08h
+                                às 18h.</p>
+                        </div>
+                        <a href="#" class="btn-channel primary">
+                            <i data-lucide="message-circle"></i> Iniciar Chat
+                        </a>
+                    </div>
+
+                    <div class="channel-card">
+                        <div class="channel-icon">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div>
+                            <h3 class="channel-title">E-mail de Suporte</h3>
+                            <p class="channel-desc">Envie suas dúvidas para nossa equipe técnica. Respondemos em até 24
+                                horas.</p>
+                        </div>
+                        <a href="mailto:suporte@agendapro.com.br" class="btn-channel">
+                            <i data-lucide="send"></i> Enviar E-mail
+                        </a>
+                    </div>
+
+                    <div class="channel-card">
+                        <div class="channel-icon">
+                            <i data-lucide="book-open"></i>
+                        </div>
+                        <div>
+                            <h3 class="channel-title">Documentação & Tutoriais</h3>
+                            <p class="channel-desc">Acesse nossos guias detalhados sobre como configurar e usar cada
+                                recurso.</p>
+                        </div>
+                        <a href="#" class="btn-channel">
+                            <i data-lucide="external-link"></i> Ver Tutoriais
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Seção de Perguntas Frequentes (FAQ) -->
+                <section class="faq-section">
+                    <div class="faq-header">
+                        <h2 class="faq-title">Perguntas Frequentes</h2>
+                    </div>
+
+                    <div class="faq-list">
+
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>Como faço para alterar meu horário de atendimento?</span>
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                Você pode alterar seus horários em <strong>Configurações > Horários</strong>. Basta
+                                ativar ou desativar os dias da semana e definir os horários de início e término
+                                desejados.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                <span>Como funcionam os lembretes automáticos por WhatsApp?</span>
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                Os lembretes são disparados automaticamente com base no horário do agendamento do seu
+                                cliente. É possível personalizar o tempo de antecedência e a mensagem na aba
+                                <strong>Configurações > Notificações</strong>.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                <span>Posso exportar os relatórios do sistema?</span>
+                                <i data-lucide="chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                Sim! Acesse a aba <strong>Relatórios</strong> e utilize o filtro de datas no topo da
+                                página para visualizar e exportar os dados financeiros e de atendimento.
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </main>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

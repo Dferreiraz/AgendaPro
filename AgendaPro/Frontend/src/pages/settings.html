@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgendaPro - Configurações</title>
+
+    <!-- Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Importando CSS -->
+    <link rel="stylesheet" href="../styles/settings.css">
+
+    <script src="../js/script.js"></script>r
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <h2>AgendaPro</h2>
+                    <span>ESPAÇO PREMIUM</span>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="dashboard.html"><i data-lucide="layout-grid"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="services.html"><i data-lucide="grid"></i> Serviços</a>
+                        </li>
+                        <li>
+                            <a href="schedule.html"><i data-lucide="calendar"></i> Agenda</a>
+                        </li>
+                        <li>
+                            <a href="clients.html"><i data-lucide="users"></i> Clientes</a>
+                        </li>
+                        <li>
+                            <a href="analytics.html"><i data-lucide="bar-chart-2"></i> Relatórios</a>
+                        </li>
+                        <li class="active">
+                            <a href="settings.html"><i data-lucide="settings"></i> Configurações</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="suport.html"><i data-lucide="help-circle"></i> Suporte</a>
+                        </li>
+                        <li>
+                            <a href="../../index.html" class="btn-logout"><i data-lucide="log-out"></i> Sair</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="main-wrapper">
+            <main class="dashboard-content">
+
+                <!-- Header da Página -->
+                <header class="page-header">
+                    <h1 class="page-title">Configurações</h1>
+                    <p class="page-subtitle">Configure a identidade do seu espaço e os parâmetros operacionais.</p>
+                </header>
+
+                <!-- Layout Interno das Configurações -->
+                <div class="settings-container">
+
+                    <!-- Submenu Vertical de Navegação -->
+                    <nav class="settings-tabs">
+                        <button class="tab-btn active" onclick="switchTab('company', event)">
+                            <i data-lucide="building-2"></i>
+                            <span>Empresa</span>
+                        </button>
+                        <button class="tab-btn" onclick="switchTab('hours', event)">
+                            <i data-lucide="clock"></i>
+                            <span>Horários</span>
+                        </button>
+                        <button class="tab-btn" onclick="switchTab('notifications', event)">
+                            <i data-lucide="bell"></i>
+                            <span>Notificações</span>
+                        </button>
+                        <button class="tab-btn" onclick="switchTab('security', event)">
+                            <i data-lucide="shield"></i>
+                            <span>Segurança</span>
+                        </button>
+                    </nav>
+
+                    <!-- ÁREA DOS CONTEÚDOS -->
+                    <div class="settings-content-wrapper">
+
+                        <!-- 1. ABA EMPRESA -->
+                        <section id="tab-company" class="settings-card tab-content active">
+                            <div class="settings-card-header">
+                                <h2 class="settings-card-title">Perfil da Empresa</h2>
+                                <p class="settings-card-subtitle">Atualize os dados comerciais visíveis para os seus
+                                    clientes.</p>
+                            </div>
+
+                            <form class="form-grid" onsubmit="event.preventDefault();">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="companyName">NOME DA EMPRESA</label>
+                                        <input type="text" id="companyName" class="form-control" value="AgendaPro Inc.">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="phoneNumber">TELEFONE / WHATSAPP</label>
+                                        <input type="text" id="phoneNumber" class="form-control"
+                                            value="+55 (11) 99999-0000">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="businessEmail">E-MAIL COMERCIAL</label>
+                                    <input type="email" id="businessEmail" class="form-control"
+                                        value="contato@agendapro.com.br">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="officeAddress">ENDEREÇO COMERCIAL</label>
+                                    <textarea id="officeAddress" class="form-control"
+                                        rows="3">Av. Paulista, 1000 - Bela Vista, São Paulo - SP, 01310-100</textarea>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn-discard">Descartar Alterações</button>
+                                    <button type="submit" class="btn-save">Salvar Preferências</button>
+                                </div>
+                            </form>
+                        </section>
+
+                        <!-- 2. ABA HORÁRIOS (HOURS) -->
+                        <section id="tab-hours" class="settings-card tab-content">
+                            <div class="settings-card-header">
+                                <h2 class="settings-card-title">Horário de Funcionamento</h2>
+                                <p class="settings-card-subtitle">Defina os horários em que os clientes podem agendar
+                                    horários.</p>
+                            </div>
+
+                            <form class="form-grid" onsubmit="event.preventDefault();">
+                                <div class="hours-schedule-list">
+
+                                    <div class="hours-row">
+                                        <span class="day-label">Segunda-feira</span>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider"></span>
+                                        </label>
+                                        <input type="time" class="form-control time-input" value="08:00">
+                                        <span class="time-sep">até</span>
+                                        <input type="time" class="form-control time-input" value="18:00">
+                                    </div>
+
+                                    <div class="hours-row">
+                                        <span class="day-label">Terça-feira</span>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider"></span>
+                                        </label>
+                                        <input type="time" class="form-control time-input" value="08:00">
+                                        <span class="time-sep">até</span>
+                                        <input type="time" class="form-control time-input" value="18:00">
+                                    </div>
+
+                                    <div class="hours-row">
+                                        <span class="day-label">Quarta-feira</span>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider"></span>
+                                        </label>
+                                        <input type="time" class="form-control time-input" value="08:00">
+                                        <span class="time-sep">até</span>
+                                        <input type="time" class="form-control time-input" value="18:00">
+                                    </div>
+
+                                    <div class="hours-row">
+                                        <span class="day-label">Quinta-feira</span>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider"></span>
+                                        </label>
+                                        <input type="time" class="form-control time-input" value="08:00">
+                                        <span class="time-sep">até</span>
+                                        <input type="time" class="form-control time-input" value="18:00">
+                                    </div>
+
+                                    <div class="hours-row">
+                                        <span class="day-label">Sexta-feira</span>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider"></span>
+                                        </label>
+                                        <input type="time" class="form-control time-input" value="08:00">
+                                        <span class="time-sep">até</span>
+                                        <input type="time" class="form-control time-input" value="19:00">
+                                    </div>
+
+                                    <div class="hours-row">
+                                        <span class="day-label">Sábado</span>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider"></span>
+                                        </label>
+                                        <input type="time" class="form-control time-input" value="08:00">
+                                        <span class="time-sep">até</span>
+                                        <input type="time" class="form-control time-input" value="14:00">
+                                    </div>
+
+                                    <div class="hours-row">
+                                        <span class="day-label">Domingo</span>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox">
+                                            <span class="slider"></span>
+                                        </label>
+                                        <input type="time" class="form-control time-input" value="08:00" disabled>
+                                        <span class="time-sep">até</span>
+                                        <input type="time" class="form-control time-input" value="12:00" disabled>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn-discard">Descartar Alterações</button>
+                                    <button type="submit" class="btn-save">Salvar Horários</button>
+                                </div>
+                            </form>
+                        </section>
+
+                        <!-- 3. ABA NOTIFICAÇÕES (NOTIFICATIONS) -->
+                        <section id="tab-notifications" class="settings-card tab-content">
+                            <div class="settings-card-header">
+                                <h2 class="settings-card-title">Lembretes e Notificações</h2>
+                                <p class="settings-card-subtitle">Gerencie como você e seus clientes recebem alertas de
+                                    agendamento.</p>
+                            </div>
+
+                            <form class="form-grid" onsubmit="event.preventDefault();">
+
+                                <div class="setting-option-row">
+                                    <div>
+                                        <strong>Lembretes de WhatsApp</strong>
+                                        <p>Enviar mensagens automáticas de confirmação 2 horas antes do atendimento.</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+
+                                <div class="setting-option-row">
+                                    <div>
+                                        <strong>Alertas por E-mail</strong>
+                                        <p>Receber alertas por e-mail a cada novo agendamento ou cancelamento realizado.
+                                        </p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+
+                                <div class="setting-option-row">
+                                    <div>
+                                        <strong>Notificações Push no Navegador</strong>
+                                        <p>Exibir alertas em tempo real na tela quando um cliente chegar.</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn-discard">Descartar Alterações</button>
+                                    <button type="submit" class="btn-save">Salvar Configurações</button>
+                                </div>
+                            </form>
+                        </section>
+
+                        <!-- 4. ABA SEGURANÇA (SECURITY) -->
+                        <section id="tab-security" class="settings-card tab-content">
+                            <div class="settings-card-header">
+                                <h2 class="settings-card-title">Segurança da Conta</h2>
+                                <p class="settings-card-subtitle">Atualize sua senha de acesso e proteja seu espaço de
+                                    trabalho.</p>
+                            </div>
+
+                            <form class="form-grid" onsubmit="event.preventDefault();">
+                                <div class="form-group">
+                                    <label for="currentPassword">SENHA ATUAL</label>
+                                    <input type="password" id="currentPassword" class="form-control"
+                                        placeholder="••••••••••••">
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="newPassword">NOVA SENHA</label>
+                                        <input type="password" id="newPassword" class="form-control"
+                                            placeholder="••••••••••••">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="confirmPassword">CONFIRMAR NOVA SENHA</label>
+                                        <input type="password" id="confirmPassword" class="form-control"
+                                            placeholder="••••••••••••">
+                                    </div>
+                                </div>
+
+                                <div class="setting-option-row" style="margin-top: 12px;">
+                                    <div>
+                                        <strong>Autenticação em Duas Etapas (2FA)</strong>
+                                        <p>Aumente a segurança exigindo um código via SMS ou aplicativo ao entrar.</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn-discard">Cancelar</button>
+                                    <button type="submit" class="btn-save">Atualizar Senha</button>
+                                </div>
+                            </form>
+                        </section>
+
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+
+    </div>
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

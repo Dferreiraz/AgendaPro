@@ -1,0 +1,147 @@
+@import url('./global.css');
+
+/* =========================
+   Página de Registro / Criar Conta
+========================= */
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: #0d1117;
+}
+
+.auth-card {
+  background-color: #171d2b;
+  border: 1px solid var(--border-color-subtle);
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 460px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.auth-brand {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold, 700);
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.auth-subtitle {
+  font-size: var(--font-size-small);
+  color: var(--text-secondary);
+}
+
+/* Formulário de Registro */
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold, 600);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.form-control {
+  background-color: #111622;
+  border: 1px solid var(--border-color-subtle);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: var(--text-primary);
+  font-size: var(--font-size-small);
+  outline: none;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.form-control:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.terms-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: var(--font-size-caption);
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+.terms-checkbox input[type="checkbox"] {
+  accent-color: #3b82f6;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.terms-checkbox a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.terms-checkbox a:hover {
+  text-decoration: underline;
+}
+
+/* Botão Principal */
+
+.btn-submit {
+  background-color: #a5c2f7;
+  color: #0f172a;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-small);
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+  margin-top: 8px;
+}
+
+.btn-submit:hover {
+  background-color: #b8d1fc;
+}
+
+/* Rodapé do Card */
+
+.auth-footer {
+  text-align: center;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color-subtle);
+  font-size: var(--font-size-small);
+  color: var(--text-secondary);
+}
+
+.auth-footer a {
+  color: #93c5fd;
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}

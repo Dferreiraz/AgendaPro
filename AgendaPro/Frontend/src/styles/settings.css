@@ -1,0 +1,323 @@
+@import url('./global.css');
+@import url('./dashboard.css');
+
+/* =========================
+   Página de Settings
+========================= */
+
+.page-header {
+  margin-bottom: 32px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: var(--font-weight-bold, 700);
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.page-subtitle {
+  font-size: var(--font-size-small);
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+/* Layout de Duas Colunas */
+.settings-container {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* =========================
+   Submenu de Navegação
+========================= */
+
+.settings-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium, 500);
+  color: var(--text-secondary);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: left;
+  width: 100%;
+}
+
+.tab-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.tab-btn:hover {
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.tab-btn.active {
+  background-color: #2b384e;
+  color: #ffffff;
+}
+
+.tab-btn.active svg {
+  color: #93c5fd;
+}
+
+/* Oculta conteúdos inativos */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* =========================
+   Card Principal
+========================= */
+
+.settings-card {
+  background-color: #171d2b;
+  border: 1px solid var(--border-color-subtle);
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.settings-card-header {
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color-subtle);
+}
+
+.settings-card-title {
+  font-size: 20px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+}
+
+.settings-card-subtitle {
+  font-size: var(--font-size-small);
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* Formulários */
+
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold, 600);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.form-control {
+  background-color: #111622;
+  border: 1px solid var(--border-color-subtle);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: var(--text-primary);
+  font-size: var(--font-size-small);
+  outline: none;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.form-control:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* =========================
+   Aba Horários (Hours)
+========================= */
+
+.hours-schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hours-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.day-label {
+  width: 120px;
+  font-size: var(--font-size-small);
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.time-input {
+  width: 120px;
+  text-align: center;
+}
+
+.time-sep {
+  color: var(--text-secondary);
+  font-size: var(--font-size-caption);
+}
+
+/* =========================
+   Aba Notificações / Toggles
+========================= */
+
+.setting-option-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-color-subtle);
+}
+
+.setting-option-row strong {
+  display: block;
+  font-size: var(--font-size-small);
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.setting-option-row p {
+  font-size: var(--font-size-caption);
+  color: var(--text-secondary);
+}
+
+/* Switch Toggle (Liga / Desliga) */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #263043;
+  transition: .3s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #3b82f6;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Botões */
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 20px;
+}
+
+.btn-discard {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-discard:hover {
+  color: var(--text-secondary);
+}
+
+.btn-save {
+  background-color: #a5c2f7;
+  color: #0f172a;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-small);
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-save:hover {
+  background-color: #b8d1fc;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .settings-container {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .hours-row {
+    flex-wrap: wrap;
+  }
+}

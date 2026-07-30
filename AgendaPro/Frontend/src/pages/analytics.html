@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgendaPro - Relatórios</title>
+  
+  <!-- Font Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Importando CSS -->
+  <link rel="stylesheet" href="../styles/analytics.css">
+</head>
+<body>
+
+  <div class="dashboard-layout">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">
+          <h2>AgendaPro</h2>
+          <span>PREMIUM WORKSPACE</span>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html"><i data-lucide="layout-grid"></i> Dashboard</a>
+            </li>
+            <li>
+              <a href="services.html"><i data-lucide="grid"></i> Serviços</a>
+            </li>
+            <li>
+              <a href="schedule.html"><i data-lucide="calendar"></i> Agenda</a>
+            </li>
+            <li>
+              <a href="clients.html"><i data-lucide="users"></i> Clientes</a>
+            </li>
+            <li class="active">
+              <a href="analytics.html"><i data-lucide="bar-chart-2"></i> Relatórios</a>
+            </li>
+            <li>
+              <a href="settings.html"><i data-lucide="settings"></i> Configurações</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="sidebar-bottom">
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="../../index.html" class="btn-logout"><i data-lucide="log-out"></i> Sair</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-wrapper">
+      <main class="dashboard-content">
+        
+        <!-- Header da Página -->
+        <header class="page-header">
+          <div>
+            <h1 class="page-title">Relatórios & Desempenho</h1>
+            <p class="page-subtitle">Acompanhe métricas financeiras e fluxo de atendimentos.</p>
+          </div>
+          
+          <button class="date-filter-btn">
+            <i data-lucide="calendar"></i>
+            <span>Últimos 30 dias</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+        </header>
+
+        <!-- KPI Cards -->
+        <section class="metrics-grid">
+          
+          <div class="metric-card">
+            <div class="metric-header">
+              <span>Faturamento Total</span>
+              <div class="metric-icon"><i data-lucide="dollar-sign"></i></div>
+            </div>
+            <div class="metric-value">R$ 12.450,00</div>
+            <div class="metric-footer">
+              <span class="badge-growth"><i data-lucide="trending-up"></i> +12.5%</span>
+              <span style="color: var(--text-secondary);">vs. mês anterior</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-header">
+              <span>Atendimentos</span>
+              <div class="metric-icon"><i data-lucide="check-circle"></i></div>
+            </div>
+            <div class="metric-value">184</div>
+            <div class="metric-footer">
+              <span class="badge-growth"><i data-lucide="trending-up"></i> +8.1%</span>
+              <span style="color: var(--text-secondary);">vs. mês anterior</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-header">
+              <span>Novos Clientes</span>
+              <div class="metric-icon"><i data-lucide="user-plus"></i></div>
+            </div>
+            <div class="metric-value">32</div>
+            <div class="metric-footer">
+              <span class="badge-loss"><i data-lucide="trending-down"></i> -2.4%</span>
+              <span style="color: var(--text-secondary);">vs. mês anterior</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-header">
+              <span>Ticket Médio</span>
+              <div class="metric-icon"><i data-lucide="credit-card"></i></div>
+            </div>
+            <div class="metric-value">R$ 67,66</div>
+            <div class="metric-footer">
+              <span class="badge-growth"><i data-lucide="trending-up"></i> +4.0%</span>
+              <span style="color: var(--text-secondary);">vs. mês anterior</span>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Gráficos e Detalhes -->
+        <section class="charts-grid">
+          
+          <!-- Gráfico Visual de Barras -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title">Receita Mensal</h3>
+              <i data-lucide="more-horizontal" style="color: var(--text-secondary);"></i>
+            </div>
+            
+            <div class="bars-container">
+              <div class="bar-group">
+                <div class="bar" style="height: 40%;"></div>
+                <span class="bar-label">Jan</span>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="height: 55%;"></div>
+                <span class="bar-label">Fev</span>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="height: 75%;"></div>
+                <span class="bar-label">Mar</span>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="height: 60%;"></div>
+                <span class="bar-label">Abr</span>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="height: 85%;"></div>
+                <span class="bar-label">Mai</span>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="height: 100%;"></div>
+                <span class="bar-label">Jun</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Serviços mais vendidos -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title">Serviços Mais Lucrativos</h3>
+            </div>
+            
+            <div class="services-list">
+              <div class="service-item-row">
+                <div class="service-item-info">
+                  <span>Corte Masculino</span>
+                  <small>94 agendamentos</small>
+                </div>
+                <div class="service-item-value">R$ 3.760,00</div>
+              </div>
+
+              <div class="service-item-row">
+                <div class="service-item-info">
+                  <span>Limpeza de Pele</span>
+                  <small>38 agendamentos</small>
+                </div>
+                <div class="service-item-value">R$ 3.420,00</div>
+              </div>
+
+              <div class="service-item-row">
+                <div class="service-item-info">
+                  <span>Barba</span>
+                  <small>52 agendamentos</small>
+                </div>
+                <div class="service-item-value">R$ 1.300,00</div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+      </main>
+    </div>
+
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

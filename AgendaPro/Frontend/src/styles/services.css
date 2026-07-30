@@ -1,0 +1,225 @@
+@import url('./global.css');
+@import url('./dashboard.css');
+
+/* =========================
+   Página de Serviços
+========================= */
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+}
+
+.page-subtitle {
+  font-size: var(--font-size-small);
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.btn-new-service {
+  background-color: #a5c2f7;
+  color: #0f172a;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-small);
+  padding: 10px 18px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.btn-new-service:hover {
+  background-color: #b8d1fc;
+}
+
+.btn-new-service svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* =========================
+   Grid de Cards de Serviços
+========================= */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #171d2b;
+  border: 1px solid var(--border-color-subtle);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.service-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-icon {
+  width: 36px;
+  height: 36px;
+  background-color: #20293a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #818cf8;
+}
+
+.service-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.service-icon.amber {
+  color: var(--amber-accent);
+}
+
+.btn-options {
+  color: var(--text-secondary);
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.btn-options:hover {
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.service-body {
+  margin: 16px 0;
+}
+
+.service-title {
+  font-size: 18px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.service-description {
+  font-size: var(--font-size-small);
+  color: var(--text-secondary);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.service-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color-subtle);
+}
+
+.service-duration {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-caption);
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.5px;
+}
+
+.service-duration svg {
+  width: 14px;
+  height: 14px;
+}
+
+.service-price {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+/* Card Adicionar Novo (Tracejado) */
+
+.add-service-card {
+  border: 1px dashed var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  cursor: pointer;
+  text-align: center;
+  transition: var(--transition);
+  background-color: transparent;
+}
+
+.add-service-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.add-icon-circle {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-icon-circle svg {
+  width: 32px;
+  height: 32px;
+}
+
+.add-service-card h3 {
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.add-service-card p {
+  font-size: var(--font-size-caption);
+  color: var(--text-secondary);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgendaPro - Schedule</title>
+
+    <!-- Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Importando CSS via pasta styles -->
+    <link rel="stylesheet" href="../styles/schedule.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <h2>AgendaPro</h2>
+                    <span>Premium Workspace</span>
+                </div>
+
+                <button class="btn-new-event">
+                    <i data-lucide="plus"></i>
+                    <span>New Event</span>
+                </button>
+
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="dashboard.html"><i data-lucide="layout-grid"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="services.html"><i data-lucide="grid"></i> Serviços</a>
+                        </li>
+                        <li class="active">
+                            <a href="schedule.html"><i data-lucide="calendar"></i> Agendas</a>
+                        </li>
+                        <li>
+                            <a href="clients.html"><i data-lucide="users"></i> Clients</a>
+                        </li>
+                        <li>
+                            <a href="analytics.html"><i data-lucide="bar-chart-2"></i> Relatórios</a>
+                        </li>
+                        <li>
+                            <a href="settings.html"><i data-lucide="settings"></i> Configurações</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="../../index.html" class="btn-logout"><i data-lucide="log-out"></i> Sair</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="main-wrapper">
+
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="date-display">FRIDAY, JUN 12</div>
+
+                <div class="header-actions">
+                    <div class="search-box">
+                        <i data-lucide="search"></i>
+                        <input type="text" placeholder="Global search...">
+                    </div>
+                    <button class="btn-icon" aria-label="Notifications">
+                        <i data-lucide="bell"></i>
+                    </button>
+                    <div class="user-avatar">
+                        <img src="../assets/icons/user.svg"
+                            alt="Admin Avatar">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Schedule Content -->
+            <main class="dashboard-content">
+
+                <!-- Header da Agenda -->
+                <section class="welcome-section">
+                    <div>
+                        <span class="section-tag">CALENDAR OVERVIEW</span>
+                        <h1 class="welcome-title">Schedule & Appointments</h1>
+                    </div>
+
+                    <div class="quick-actions">
+                        <button class="btn-quick"><i data-lucide="chevron-left"></i></button>
+                        <button class="btn-quick">Today</button>
+                        <button class="btn-quick"><i data-lucide="chevron-right"></i></button>
+                        <button class="btn-new-event" style="margin: 0; padding: 8px 16px;">
+                            <i data-lucide="plus"></i> New Appointment
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Grade de Agendamentos / Calendário do Dia -->
+                <div class="card schedule-container">
+                    <div class="schedule-header-bar">
+                        <h2>June 12, 2026</h2>
+                        <div class="view-options">
+                            <button class="btn-view active">Day</button>
+                            <button class="btn-view">Week</button>
+                            <button class="btn-view">Month</button>
+                        </div>
+                    </div>
+
+                    <div class="timeline-grid">
+                        <!-- Linha das 08:00 -->
+                        <div class="time-row">
+                            <span class="time-label">08:00 AM</span>
+                            <div class="time-slot"></div>
+                        </div>
+
+                        <!-- Linha das 09:00 com Compromisso -->
+                        <div class="time-row">
+                            <span class="time-label">09:00 AM</span>
+                            <div class="time-slot">
+                                <div class="event-card event-blue">
+                                    <div class="event-info">
+                                        <strong>João Silva</strong>
+                                        <span>Financial Consulting</span>
+                                    </div>
+                                    <span class="event-time">09:00 - 10:00 AM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Linha das 10:00 com Compromisso -->
+                        <div class="time-row">
+                            <span class="time-label">10:00 AM</span>
+                            <div class="time-slot">
+                                <div class="event-card event-purple" style="margin-top: 30px; height: 50px;">
+                                    <div class="event-info">
+                                        <strong>Maria Souza</strong>
+                                        <span>Estate Planning</span>
+                                    </div>
+                                    <span class="event-time">10:30 - 11:30 AM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Linha das 11:00 (Gap livre) -->
+                        <div class="time-row">
+                            <span class="time-label">11:00 AM</span>
+                            <div class="time-slot"></div>
+                        </div>
+
+                        <!-- Linha das 12:00 (Almoço/Pausa) -->
+                        <div class="time-row">
+                            <span class="time-label">12:00 PM</span>
+                            <div class="time-slot">
+                                <div class="event-card event-break">
+                                    <span>Lunch Break</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Linha das 14:00 com Compromisso -->
+                        <div class="time-row">
+                            <span class="time-label">02:00 PM</span>
+                            <div class="time-slot">
+                                <div class="event-card event-green">
+                                    <div class="event-info">
+                                        <strong>Carlos Oliveira</strong>
+                                        <span>Portfolio Review</span>
+                                    </div>
+                                    <span class="event-time">02:00 - 03:00 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+            <!-- Footer -->
+            <footer class="dashboard-footer">
+                <p>© 2026 AgendaPro Inc. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Security</a>
+                    <a href="#">Status</a>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

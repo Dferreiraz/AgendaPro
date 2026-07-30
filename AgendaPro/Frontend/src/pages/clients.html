@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgendaPro - Clientes</title>
+
+    <!-- Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Importando CSS específico que carrega o restante via @import -->
+    <link rel="stylesheet" href="../styles/clients.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <h2>AgendaPro</h2>
+                    <span>PREMIUM WORKSPACE</span>
+                </div>
+
+                <nav class="sidebar-nav" style="margin-top: 32px;">
+                    <ul>
+                        <li>
+                            <a href="./dashboard.html"><i data-lucide="layout-grid"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="services.html"><i data-lucide="grid"></i> Serviços</a>
+                        </li>
+                        <li>
+                            <a href="./schedule.html"><i data-lucide="calendar"></i> Agenda</a>
+                        </li>
+                        <li class="active">
+                            <a href="./clients.html"><i data-lucide="users"></i> Clientes</a>
+                        </li>
+                        <li>
+                            <a href="analytics.html"><i data-lucide="bar-chart-2"></i> Relatórios</a>
+                        </li>
+                        <li>
+                            <a href="settings.html"><i data-lucide="settings"></i> Configurações</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="../../index.html" class="btn-logout"><i data-lucide="log-out"></i> Sair</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="main-wrapper">
+
+            <!-- Content Area -->
+            <main class="dashboard-content">
+
+                <!-- Top Title Bar -->
+                <header class="page-title-bar">
+                    <div>
+                        <h1 class="page-title">Clientes</h1>
+                        <p class="page-subtitle">Gerencie sua base de clientes e histórico de agendamentos.</p>
+                    </div>
+
+                    <button class="btn-primary-action">
+                        <i data-lucide="plus"></i> Novo Cliente
+                    </button>
+                </header>
+
+                <!-- Grid de Cards de Clientes -->
+                <section class="cards-grid">
+
+                    <!-- Card Cliente 1 -->
+                    <article class="item-card">
+                        <div class="card-top">
+                            <div class="icon-avatar">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <button class="btn-more" aria-label="Opções">
+                                <i data-lucide="more-vertical"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-title">João Silva</h3>
+                            <p class="card-description">
+                                Cliente desde Jan/2024. Preferência por horários matutinos e atendimento VIP.
+                            </p>
+                        </div>
+
+                        <div class="card-footer">
+                            <div class="info-badge">
+                                <i data-lucide="phone"></i>
+                                <span>(11) 98765-4321</span>
+                            </div>
+                            <span class="highlight-value">12 Visitas</span>
+                        </div>
+                    </article>
+
+                    <!-- Card Cliente 2 -->
+                    <article class="item-card">
+                        <div class="card-top">
+                            <div class="icon-avatar">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <button class="btn-more" aria-label="Opções">
+                                <i data-lucide="more-vertical"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-title">Maria Souza</h3>
+                            <p class="card-description">
+                                Atendimento recorrente quinzenal. Notificar lembretes via WhatsApp.
+                            </p>
+                        </div>
+
+                        <div class="card-footer">
+                            <div class="info-badge">
+                                <i data-lucide="phone"></i>
+                                <span>(11) 91234-5678</span>
+                            </div>
+                            <span class="highlight-value">8 Visitas</span>
+                        </div>
+                    </article>
+
+                    <!-- Card Cliente 3 -->
+                    <article class="item-card">
+                        <div class="card-top">
+                            <div class="icon-avatar">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <button class="btn-more" aria-label="Opções">
+                                <i data-lucide="more-vertical"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-title">Carlos Oliveira</h3>
+                            <p class="card-description">
+                                Possui pacote de serviços ativo. Próxima renovação em 15 dias.
+                            </p>
+                        </div>
+
+                        <div class="card-footer">
+                            <div class="info-badge">
+                                <i data-lucide="phone"></i>
+                                <span>(11) 97777-8888</span>
+                            </div>
+                            <span class="highlight-value">15 Visitas</span>
+                        </div>
+                    </article>
+
+                    <!-- Card Tracejado: Adicionar Novo -->
+                    <div class="add-new-card">
+                        <div class="add-icon-wrapper">
+                            <i data-lucide="plus-circle"></i>
+                        </div>
+                        <h3>Adicionar Novo</h3>
+                        <p>Cadastre um novo cliente</p>
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
