@@ -12,11 +12,13 @@
 ### Design
 
 * [x] Landing Page
+* [x] Login
 * [x] Dashboard
-* [x] Services Management
 * [x] Client Management
-* [ ] Appointment Management
-* [ ] Settings
+* [x] Services Management
+* [x] Appointment Management
+* [x] Team Management
+* [x] Settings
 
 ---
 
@@ -24,30 +26,34 @@
 
 ## Landing Page
 
+* [x] Estrutura HTML
+* [x] Estilização CSS
+* [x] Responsividade
+* [ ] Animações
+* [ ] SEO básico
+
+## Login
+
 * [ ] Estrutura HTML
 * [ ] Estilização CSS
 * [ ] Responsividade
-* [ ] Animações
+* [ ] Validação visual
 
 ## Dashboard
 
 * [ ] Sidebar
+* [ ] Header
 * [ ] Cards de métricas
-* [ ] Tabela de agendamentos
+* [ ] Próximos agendamentos
+* [ ] Gráfico de desempenho
 * [ ] Responsividade
-
-## Services Management
-
-* [ ] Lista de serviços
-* [ ] Modal de cadastro
-* [ ] Botão editar
-* [ ] Botão excluir
 
 ## Client Management
 
 * [ ] Lista de clientes
 * [ ] Pesquisa
 * [ ] Filtros
+* [ ] Modal de cadastro
 * [ ] Responsividade
 
 ## Appointment Management
@@ -55,58 +61,93 @@
 * [ ] Calendário
 * [ ] Lista de horários
 * [ ] Status dos agendamentos
+* [ ] Modal de agendamento
+* [ ] Responsividade
+
+## Services Management
+
+* [ ] Lista de serviços
+* [ ] Modal de cadastro
+* [ ] Edição de serviço
+* [ ] Exclusão de serviço
+* [ ] Responsividade
+
+## Team Management
+
+* [ ] Lista de colaboradores
+* [ ] Cadastro de colaborador
+* [ ] Disponibilidade
+* [ ] Responsividade
+
+## Settings
+
+* [ ] Dados da empresa
+* [ ] Horários de funcionamento
+* [ ] Notificações
+* [ ] Segurança
+* [ ] Responsividade
 
 ---
 
 # Fase 2 - JavaScript
 
 * [ ] Menu mobile
+* [ ] Sidebar responsiva
 * [ ] Modais
 * [ ] CRUD local
-* [ ] Filtros
 * [ ] Pesquisa dinâmica
+* [ ] Filtros
 * [ ] Componentes reutilizáveis
+* [ ] Armazenamento local (LocalStorage)
 
 ---
 
 # Fase 3 - Banco de Dados
 
-Tecnologia:
+## Tecnologia
 
-* PostgreSQL
-* Supabase
+* [ ] Supabase
+* [ ] PostgreSQL
 
-Tabelas:
+## Estrutura
 
 * [ ] Users
 * [ ] Businesses
 * [ ] Clients
 * [ ] Services
+* [ ] TeamMembers
 * [ ] Appointments
 
 ---
 
 # Fase 4 - Backend
 
-Tecnologia:
+## Tecnologia
 
-* FastAPI
+* [ ] Definir arquitetura
 
-Rotas:
+  * FastAPI
+  * Supabase API
+  * Node.js
+
+## Funcionalidades
 
 * [ ] Login
 * [ ] Usuários
 * [ ] Clientes
 * [ ] Serviços
+* [ ] Equipe
 * [ ] Agendamentos
 
 ---
 
 # Fase 5 - Integração
 
-* [ ] Frontend + API
-* [ ] API + Banco
-* [ ] Testes
+* [ ] Frontend + Backend
+* [ ] Backend + Banco
+* [ ] CRUD completo
+* [ ] Tratamento de erros
+* [ ] Testes gerais
 
 ---
 
@@ -115,31 +156,72 @@ Rotas:
 * [ ] Cadastro
 * [ ] Login
 * [ ] Logout
+* [ ] Recuperação de senha
 * [ ] Proteção de rotas
 
 ---
 
-# Fase 7 - SaaS
+# Fase 7 - White Label
 
-* [ ] Multiempresa
 * [ ] Configuração por empresa
-* [ ] Separação de dados
+* [ ] Personalização de logo
+* [ ] Personalização de cores
+* [ ] Domínio personalizado
+* [ ] Banco de dados por cliente
 
 ---
 
-# Fase 8 - Melhorias
+# Fase 8 - SaaS
+
+* [ ] Multiempresa
+* [ ] Separação de dados
+* [ ] Gestão de assinaturas
+* [ ] Planos e permissões
+* [ ] Painel administrativo
+
+---
+
+# Fase 9 - Melhorias
 
 * [ ] WhatsApp
 * [ ] E-mail
-* [ ] Relatórios
+* [ ] Relatórios PDF
 * [ ] Dashboard avançado
-* [ ] Deploy
-* [ ] Domínio próprio
+* [ ] Upload de imagens
+* [ ] Backup
+* [ ] Logs de atividades
+
+---
+
+# Fase 10 - Deploy
+
+* [ ] GitHub
+* [ ] Vercel
+* [ ] Supabase Produção
+* [ ] Domínio personalizado
+* [ ] Google Analytics
+* [ ] SEO
 
 ---
 
 # Objetivo Final
 
-Criar uma plataforma profissional de agendamento online para clínicas, estéticas, barbearias e pequenos negócios.
+Criar uma plataforma profissional de gestão e agendamento online para:
+
+* Clínicas estéticas
+* Barbearias
+* Salões de beleza
+* Consultórios
+* Pequenos negócios de serviços
 
 ---
+
+## Visão de Evolução
+
+```text
+AgendaPro Base
+        ↓
+AgendaPro White Label
+        ↓
+AgendaPro SaaS
+```
