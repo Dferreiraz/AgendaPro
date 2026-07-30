@@ -1,0 +1,134 @@
+@import url(./global.css);
+@import url(./dashboard.css);
+
+/* =========================
+   Schedule Specific Styles
+========================= */
+
+.schedule-container {
+  padding: 0;
+  overflow: hidden;
+}
+
+.schedule-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-color-subtle);
+}
+
+.schedule-header-bar h2 {
+  font-size: 18px;
+  font-weight: var(--font-weight-semibold);
+}
+
+.view-options {
+  display: flex;
+  background-color: #111622;
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color-subtle);
+}
+
+.btn-view {
+  padding: 6px 14px;
+  font-size: var(--font-size-caption);
+  color: var(--text-secondary);
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.btn-view.active, 
+.btn-view:hover {
+  background-color: #1e2638;
+  color: var(--text-primary);
+}
+
+/* Timeline Layout */
+
+.timeline-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.time-row {
+  display: flex;
+  min-height: 80px;
+  border-bottom: 1px solid var(--border-color-subtle);
+}
+
+.time-label {
+  width: 100px;
+  padding: 16px;
+  font-size: var(--font-size-caption);
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-medium);
+  border-right: 1px solid var(--border-color-subtle);
+  flex-shrink: 0;
+}
+
+.time-slot {
+  flex: 1;
+  padding: 8px 16px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+/* Blocks of events */
+
+.event-card {
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.event-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-info strong {
+  font-size: var(--font-size-small);
+  color: var(--text-primary);
+}
+
+.event-info span {
+  font-size: var(--font-size-caption);
+  color: var(--text-secondary);
+}
+
+.event-time {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Variações de Cores dos Cards de Evento */
+.event-blue {
+  background-color: rgba(59, 130, 246, 0.15);
+  border-left: 4px solid var(--blue-accent);
+  color: #93c5fd;
+}
+
+.event-purple {
+  background-color: rgba(168, 85, 247, 0.15);
+  border-left: 4px solid #a855f7;
+  color: #c084fc;
+}
+
+.event-green {
+  background-color: rgba(16, 185, 129, 0.15);
+  border-left: 4px solid var(--green-accent);
+  color: #6ee7b7;
+}
+
+.event-break {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px dashed var(--border-color);
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: var(--font-size-caption);
+}
