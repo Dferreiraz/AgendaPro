@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgendaPro - Serviços</title>
+
+    <!-- Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Importação do CSS específico -->
+    <link rel="stylesheet" href="../styles/services.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <h2>AgendaPro</h2>
+                    <span>PREMIUM WORKSPACE</span>
+                </div>
+
+                <nav class="sidebar-nav" style="margin-top: 32px;">
+                    <ul>
+                        <li>
+                            <a href="dashboard.html"><i data-lucide="layout-grid"></i> Dashboard</a>
+                        </li>
+                        <li class="active">
+                            <a href="services.html"><i data-lucide="grid"></i> Serviços</a>
+                        </li>
+                        <li>
+                            <a href="schedule.html"><i data-lucide="calendar"></i> Agenda</a>
+                        </li>
+                        <li>
+                            <a href="clients.html"><i data-lucide="users"></i> Clientes</a>
+                        </li>
+                        <li>
+                            <a href=""><i data-lucide="bar-chart-2"></i> Relatórios</a>
+                        </li>
+                        <li>
+                            <a href="#"><i data-lucide="settings"></i> Settings</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="../../index.html" class="btn-logout"><i data-lucide="log-out"></i> Sair</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Content Wrapper -->
+        <div class="main-wrapper">
+            <main class="dashboard-content">
+
+                <!-- Header da Página -->
+                <header class="page-header">
+                    <div>
+                        <h1 class="page-title">Serviços</h1>
+                        <p class="page-subtitle">Gerencie seu catálogo de atendimentos e precificação.</p>
+                    </div>
+
+                    <button class="btn-new-service">
+                        <i data-lucide="plus"></i> Novo Serviço
+                    </button>
+                </header>
+
+                <!-- Cards dos Serviços -->
+                <section class="services-grid">
+
+                    <!-- Card 1: Corte Masculino -->
+                    <article class="service-card">
+                        <div class="service-card-header">
+                            <div class="service-icon">
+                                <i data-lucide="scissors"></i>
+                            </div>
+                            <button class="btn-options" aria-label="Opções">
+                                <i data-lucide="more-vertical"></i>
+                            </button>
+                        </div>
+
+                        <div class="service-body">
+                            <h3 class="service-title">Corte Masculino</h3>
+                            <p class="service-description">
+                                Corte clássico ou degradê moderno com acabamento premium e...
+                            </p>
+                        </div>
+
+                        <div class="service-card-footer">
+                            <div class="service-duration">
+                                <i data-lucide="clock"></i>
+                                <span>45 MIN</span>
+                            </div>
+                            <span class="service-price">R$ 40,00</span>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Barba -->
+                    <article class="service-card">
+                        <div class="service-card-header">
+                            <div class="service-icon">
+                                <i data-lucide="smile"></i>
+                            </div>
+                            <button class="btn-options" aria-label="Opções">
+                                <i data-lucide="more-vertical"></i>
+                            </button>
+                        </div>
+
+                        <div class="service-body">
+                            <h3 class="service-title">Barba</h3>
+                            <p class="service-description">
+                                Alinhamento completo, terapia de toalha quente e finalização com...
+                            </p>
+                        </div>
+
+                        <div class="service-card-footer">
+                            <div class="service-duration">
+                                <i data-lucide="clock"></i>
+                                <span>30 MIN</span>
+                            </div>
+                            <span class="service-price">R$ 25,00</span>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: Limpeza de Pele -->
+                    <article class="service-card">
+                        <div class="service-card-header">
+                            <div class="service-icon amber">
+                                <i data-lucide="sparkles"></i>
+                            </div>
+                            <button class="btn-options" aria-label="Opções">
+                                <i data-lucide="more-vertical"></i>
+                            </button>
+                        </div>
+
+                        <div class="service-body">
+                            <h3 class="service-title">Limpeza de Pele</h3>
+                            <p class="service-description">
+                                Tratamento profundo com extração, esfoliação e máscara de...
+                            </p>
+                        </div>
+
+                        <div class="service-card-footer">
+                            <div class="service-duration">
+                                <i data-lucide="clock"></i>
+                                <span>60 MIN</span>
+                            </div>
+                            <span class="service-price">R$ 90,00</span>
+                        </div>
+                    </article>
+
+                    <!-- Card Tracejado: Adicionar Novo -->
+                    <div class="add-service-card">
+                        <div class="add-icon-circle">
+                            <i data-lucide="plus-circle"></i>
+                        </div>
+                        <h3>Adicionar Novo</h3>
+                        <p>Amplie seu catálogo</p>
+                    </div>
+
+                </section>
+
+            </main>
+        </div>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
