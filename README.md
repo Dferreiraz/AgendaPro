@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <em>React • Vite • Tailwind CSS • PostgreSQL (planejado)</em>
+  <em>React • Vite • Tailwind CSS • PostgreSQL</em>
 </p>
 
 ---
