@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* 1. Tema de Cores (Extraído e simplificado do seu design) */
+@theme {
+  --color-surface: #10131a;
+  --color-on-surface: #e1e2ec;
+  --color-on-surface-variant: #c2c6d6;
+  --color-surface-container: #1d2027;
+  --color-surface-container-low: #191b23;
+  --color-surface-container-lowest: #0b0e15;
+  --color-surface-container-high: #272a31;
+  --color-primary-container: #4d8eff; /* O azul vibrante principal */
+  --color-tertiary: #ffb786; /* Laranja para destaques secundários */
+  
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* 2. Estilos Globais */
+body {
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 3. Classes Utilitárias Customizadas do Design */
+.glass-card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 40%),
+              radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.05), transparent 40%);
+}
+
+/* Estilos para o FAQ (Acordeão) que veremos depois */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+.accordion-active .accordion-content {
+  max-height: 200px;
+}
+.accordion-active .accordion-icon {
+  transform: rotate(180deg);
+}
